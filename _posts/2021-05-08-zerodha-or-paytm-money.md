@@ -13,7 +13,7 @@ Your PayTM Money account is linked to your primary paytm account as in they shar
 
 This is an easy problem for PayTM to fix i.e. they could send the passsword reset link only to the registered email, instead of sending it as an SMS too. I reached out to them on Twitter and they replied that I can just disable my account if my phone is lost. This is missing the point. The time taken to conclude the device has been lost and additional time spent on blocking the account, is enough for an attacker to do the damage.  
 
-![My helpful screenshot](/assets/img/paytm-money.jpg)
+![PayTM Twitter Reply](/assets/img/paytm-money.jpg)
 
 Zerodha on the other hand is completly independent of your mobile number. It offers true 2FA with a Password and Time Based OTP (Authenticator apps). However, Coin lacks behind severily in the UI and the feature set as compared to PayTM. 
 
