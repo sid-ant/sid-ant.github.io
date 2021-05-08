@@ -2,7 +2,7 @@
 layout: post
 title:  "Is it possible to corrupt someone's mind?"
 date:   2021-01-12 21:47:55 +0530
-categories: rant
+categories: life
 ---
 
 I first heard of the `corrupting the minds` phrase in a PewDiePie video where he was discussing Plato and Socrates. Especially when he tells us that Socrates was sentenced to death for corrupting the minds of youth. Ofcourse, when I first heard it, I paid no attention to it and continued with the 20+ minute video. 
