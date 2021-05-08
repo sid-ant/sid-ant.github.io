@@ -3,6 +3,7 @@ layout: post
 title:  "Zerodha Coin or PayTM Money?"
 date:   2021-05-08 13:45:55 +0530
 categories: tech
+published: false
 ---
 
 A google search on `Zerodha Coin vs PayTM Money` led to nothing conclusive. Besides the difference in how they hold Mutual Funds ( Demat vs Statement of Account respectively) there seems be no other substancial difference. However there is. 
