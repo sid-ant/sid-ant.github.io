@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/main.css">
     <title> State Monad Tutorial </title>
   </head>
   <body>
 
   <h1> Title : State Monad Tutorial </h1>
   <h2> Date : 04 September 2021 </h2>
+
+  <p> 
 I've found  [Learn You A Haskell's explanation](http://learnyouahaskell.com/for-a-few-monads-more#state) and even [The State Monad: A Tutorial for the Confused?](http://brandon.si/code/the-state-monad-a-tutorial-for-the-confused/) to be incomplete and making several key assumptions. 
 Hopefully, this article should fill up those gaps. 
+  </p>
 
 As brandon from [The State Monad: A Tutorial for the Confused?](http://brandon.si/code/the-state-monad-a-tutorial-for-the-confused/) rightly points out, the challenge in understanding State monad comes from understanding the following syntax. 
 
-```haskell
-newtype State s a = State { runState :: s -> (a, s) }
-``` 
+<div class='code'> 
+  newtype State s a = State { runState :: s -> (a, s) }
+</div>
 
 And this is where we start, or more accurately we start from `newtype` and `records` syntax. Let's take a simple example and start building on it. 
 
 #### Example 1:  As a refresher we start with a very simple `newtype` called Color.
 
-```haskell 
-newtype Color c = Color {getColor :: c}
-``` 
+<div class='code'> 
+  newtype Color c = Color {getColor :: c}
+</div>
+
+
 *Question: Given only this code snippet what can we do with it? *
 
 Well, we can, 
@@ -31,74 +38,81 @@ Well, we can,
 1. Create a new Color type as `let x = Color "red"` 
 2. And then extract the red color out by using the accessory function as `let actualVal = getColor x` 
 3. We also notice that the type of Color constructor is 
-```haskell  
+
+<div class='code'> 
 :t Color
 Color :: c -> Color c
-```
+</div>
+
 and the type of getColor is 
-```haskell 
+
+<div class='code'> 
 :t getColor
 getColor :: Color c -> c 
-```
+</div>
 
 #### Example 2: A newtype with 2 type variables on the left side
 
-```haskell
+<div class='code'> 
 newtype Couple a b = Couple {getter :: (a,b)}
-```
+</div>
 *Question: Couple takes 2 type variables on the left side, what does it mean? How can we create a couple type?*
 
 To answer this, let's take a look a what is the type of Couple constructor? 
 
-```haskell 
+<div class='code'> 
 :t Couple
 Couple :: (a, b) -> Couple a b
-```
+</div>
+
 Couple constructor takes a `tuple` of values and then creates a `Couple` type. Thus we can do the following, 
 
-```haskell 
+
+<div class='code'> 
 let y = Couple ("Electricity","Magnetism") 
 getter y 
 -- ("Electricity","Magnetism")
-```
+</div>
 
 Wait what? Confused on why Couple take a tuple but not `Couple "Electricity" "Magnetism"` ? It's an easy mistake to make when looking at only the newtype syntax. Let's discover more and try to answer this. 
 
 #### Example 3: Multiple fields and records recap 
 
-```haskell 
+<div class='code'> 
 data Family a b = Family {getFamily :: (a,b),getFirst :: a}
-``` 
+</div>
+
 Once again we look at the type of Family constructor & we notice that to create Family we need 
 
-```haskell 
+<div class='code'> 
 :t Family
 Family :: (a, b) -> a -> Family a b
-``` 
+</div>
 
 If you are asking yourself why does `Family` constructor needs a tuple and also a value, it's okay. After reading countless tutorials on Monads it's easy to forget that records is just a sugar syntax. Let's look at Family constructor again without records. 
  
-```haskell 
+<div class='code'> 
 data CleanFamily a b = CleanFamily (a,b) a
-``` 
+</div>
+
 Aha, much cleaner. This tells us that, the number of type variables on the left has nothing to do with the actually usage of them. It's just telling us how many different types our constructor supports. 
 
 The record syntax just provided us with helper functions. In the CleanFamily, we would've achieved the same functionality by writing those function functions by hand as 
 
-```haskell
+<div class='code'> 
 getCleanFamily :: CleanFamily a b -> (a,b) 
 getCleanFamily (a,b) _ = (a,b) 
 
 getFirst :: CleanFamily a b -> a 
 getFirst _ a  = a 
-```
+</div>
 
 #### Example 4 : State Type Look alike without Records Syntax 
 
-```haskell 
+<div class='code'> 
 newtype State s a = State { runState :: s -> (a, s) } 
 newtype Notebook page val = Notebook (val -> (val,page)) 
-```
+</div>
 
 `Notebook` is very similar to State, except we don't have any accessory function like `runState` 
 
@@ -106,26 +120,26 @@ newtype Notebook page val = Notebook (val -> (val,page))
 
 Looking at the type tells us that, we need to pass a function which takes a val and return a tuple of val and page. 
 
-```haskell 
+<div class='code'> 
 :t Notebook 
 Notebook :: (page -> (val, page)) -> Notebook page val
-```
+</div>
 
 So, we can create a Notebook type as 
 
-```haskell 
+<div class='code'> 
 someFunc x = ("some default value",x+1)
 let note = Notebook someFunc 
-```
+</div>
 
 Note all we have done is wrap a function in the Notebook type. By very definition that is what Notebook type is. 
 
 Now, how can we actually use the someFunc? Without the records type, we will have to create a custom function which takes Notebook and returns the function which is defined in it. 
 
-``` haskell 
+<div class='code'> 
 extractFunc :: Notebook page val -> ( page -> ( val, page ) ) 
 extractFunc (Notebook fn) = fn 
-```
+</div>
 
 Finally we can use the function as, 
 
@@ -139,7 +153,7 @@ which will produce the following result
 
 Observe that we are actually doing exactly the same thing as we did with the `Notebook` type. 
 
-```haskell
+<div class='code'> 
 newtype State s a = State { runState :: s -> (a, s) }
 
 :t State 
@@ -151,8 +165,8 @@ runState :: State s a -> s -> (a, s)
 let initialState = State $ \counter -> ("some default value",counter+1)
 runState initialState 23 
 --- ("some default value",24)
+</div>
 
-``` 
 
 This concludes the Part 1. I hope you can now completely understand what does `newtype State s a = State { runState :: s -> (a, s) }` mean. Armed with this knowledge, let's explore how this is useful in the next Part.    
 

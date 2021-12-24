@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: lightcyan; 
+    padding: 20px; 
+    background-image: linear-gradient(to right bottom,#29323C
+    ,#485563    );
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+    font-size: 20px;
+}
+
+a:link {
+    color: lightblue;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+a:visited {
+    color: lightblue;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+h1 {
+    color: lightseagreen
+}
+
+h2 {
+    color: lightcoral
+}
+
+h3 {
+    color: lightpink
+}
+
+li {
+    font-size: 20px;
+}
+
+.code {
+    width: 30%;
+    margin: 12px;
+    padding: 12px;
+    background-color: lightslategray;
+    color: lightgreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1.2;
+}
