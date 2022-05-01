@@ -4,9 +4,9 @@ title:  "State Monad Tutorial"
 date:   2022-04-23 20:43:18 +0530
 categories: engineering
 ---
- I've found Learn You A Haskell's explanation and even The State Monad: A Tutorial for the Confused? to be incomplete and making several key assumptions when explaining the state monad. Hopefully, this post should fill up those gaps. 
+ I've found [Learn You A Haskell](http://learnyouahaskell.com/chapters) explanation and even [The State Monad: A Tutorial for the Confused?](http://brandon.si/code/the-state-monad-a-tutorial-for-the-confused/) to be incomplete and making several key assumptions when explaining the state monad. Hopefully, this post should fill up those gaps. 
  
- As Brandon from The State Monad: A Tutorial for the Confused? rightly points out, the challenge in understanding State monad comes from understanding the following syntax.
+ As Brandon from [The State Monad: A Tutorial for the Confused?](http://brandon.si/code/the-state-monad-a-tutorial-for-the-confused/) rightly points out, the challenge in understanding State monad comes from understanding the following syntax.
 
 {% highlight haskell %}
 > newtype State s a = State { runState :: s -> (a, s) }
