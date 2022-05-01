@@ -2,7 +2,7 @@
 layout: post
 title:  "State Monad Tutorial"
 date:   2022-04-23 20:43:18 +0530
-categories: jekyll update
+categories: engineering
 ---
  I've found Learn You A Haskell's explanation and even The State Monad: A Tutorial for the Confused? to be incomplete and making several key assumptions when explaining the state monad. Hopefully, this post should fill up those gaps. 
  
