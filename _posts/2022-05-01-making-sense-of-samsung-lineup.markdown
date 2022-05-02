@@ -5,7 +5,7 @@ date:   2022-05-01 14:30:18 +0530
 categories: tech
 ---
 
-Samsung manufactures and sells a lof of smartphones. However, it's really hard to understand if a smartphone is good enough or current just by knowing it's name. 
+Samsung manufactures and sells a lot of smartphones. However, it's really hard to understand if a smartphone is good enough or current just by knowing it's name. 
 Contradictory to this is Apple, where common sense dictates that an iPhone 13 is better than an iPhone 12. 
 Which may not be entirely true but consistent naming is extemely important to build a brand. 
 
