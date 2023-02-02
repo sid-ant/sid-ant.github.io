@@ -11,7 +11,7 @@ About 12 weeks back, I bought my first iPhone; The iPhone 12.
 
 A mid-tier Android phone not only fulfils all of my requirements from a Smartphone but the lower price also allows me to use the phone carelessly and upgrade whenever I would want to. 
 
-iPhone 12 however is twice as expensive and yet I decided to buy it. Why was that? 
+iPhone 12 however is twice as expensive from a mid-tier android phone and yet I decided to buy it. Why was that? 
 
 I believe it was because of the following reasons: 
 
