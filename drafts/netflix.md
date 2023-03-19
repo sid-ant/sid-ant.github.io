@@ -1,9 +1,3 @@
----
-layout: post
-title:  "Netflix password sharing crackdown is bad product design"
-date:   2023-02-05 18:48:18 +0100
-categories: product
----
 
 This post is my attempt to create a new series where I would discuss the direction of a product / feature at various tech companies.
 
