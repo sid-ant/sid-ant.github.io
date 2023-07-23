@@ -65,14 +65,12 @@ Samsung releases at-least 9/10 smartphones in the mid-range segment alone, every
 
 In conclusion with these many smartphone, there is no way to build a word of mouth for the brand. The competition is too fierce for such a confusing lineup. 
 
-However, If I were Samsung, I would release 1 phone in each of the following series. 
+However, If I were Samsung, I would release 1 phone in each of the following series. And I would continue to sell previous year's flagship at a slighly discounted price. Just like what Apple does. 
 
-### Dream Lineup 
+### My Imaginative `SAM` Lineup 
 
 | Phone      | Description | Cost        |
 | ----------- | ----------- | ----------- |
 | S22           | Flagships   | $700+       |
-| A22           | Premium Midrange   | $500+       |
-| M22           | Value for Money   | $300+       |
-| N22           | Affordables   | $200+       |
-| G22           | Enablers   | $100+       |
+| A22           | Midrange   | $300+       |
+| M22           | Enablers   | $100+       |

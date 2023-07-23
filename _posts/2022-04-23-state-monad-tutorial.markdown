@@ -165,10 +165,8 @@ runState initialState 23
 {% endhighlight %}
 
 
-This concludes the Part 1. I hope you can now completely understand what does 
-`newtype State s a = State { runState :: s -> (a, s) }` mean. 
+I hope you can now completely understand what does `newtype State s a = State { runState :: s -> (a, s) }` mean. 
 
-Armed with this knowledge, let's explore how this is useful in the next Part.
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll

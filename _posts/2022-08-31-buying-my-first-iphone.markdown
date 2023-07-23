@@ -40,9 +40,8 @@ Not only strangers but even friends treat you better when you have an iPhone. It
 
 Here are a few examples which have stood out for me. 
 
-1. **Bangalore Salon**: I was treated with more prestige / priority when I was carrying the iPhone instead of my Android phone. 
-2. **Solo Travelling**: Carrying an iPhone allowed me to enter higher end restaurants solo, without explaining myself. 
-3. **Work Parties**: It's easier to make friends with fellow iPhone owners. 
+1. **Solo Travelling**: It could be in my head but I felt like carrying an iPhone allowed me to enter higher end restaurants solo, without explaining myself. 
+2. **Work Parties**: It's easier to make friends with fellow iPhone owners. 
 
 And it looks like because of this killer feature, there's an iPhone horde and because of the horde, the community (tech youtubers) promotes it despite the clear shortcomings, recruiting even more people in the horde and the cycle continues. 
 
